@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-  
-class Home extends Component {
+import AddTodo from "../component/AddTodo.js";
+import Todos from "../component/todos.js";
+import "./Home.css";
+import Badge from '@mui/material/Badge';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+
+class Home extends Component { 
   // A default state of this component with an empty list of todos.
   constructor() {
     super();
     this.state = {
       // create your empty list here call it todos.
+      todos:[]
     };
   }
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
@@ -27,11 +33,17 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h1>Todo's </h1>
-        <p> Replace this</p>
+        <h1>Todo's <m></m>
+        <Badge badgeContent={this.counts} color="primary">
+          <AddTaskIcon color="action" />
+        </Badge>
+        </h1>
+        <Todos todos={this.state.todos} />
+        <hr></hr>
+        <AddTodo addTodo={this.addTodo} />
       </div>
     );
-  }
+  } 
 }
 
 export default Home;
