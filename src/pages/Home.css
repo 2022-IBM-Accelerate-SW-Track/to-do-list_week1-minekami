@@ -1,4 +1,15 @@
 .Home {
   background-color: ghostwhite;
   height: 100vh;
+  
+}
+
+spc{
+  border: 0;
+  border-top: 1px solid black;
+  width:10%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
